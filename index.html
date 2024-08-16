@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terabox Player Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffe6e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #33ff33;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #80ff80;
+        }
+      .message {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ff0000;
+        }
+
+        
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Terabox Player</h1>
+        <input type="text" id="urlInput" placeholder="Enter Your Terabox URL">
+        <button onclick="getvideo()">Play Video</button>
+      <div id="message" class="message"></div>
+    </div>
+
+    <script>
+      async function getvideo() {
+            // Show loading message
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = 'Loading...';
+
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+           messageDiv.innerHTML = 'Data Not found. Use this - <a href="https://telegram.me/terabox_player_downloader" target="_blank">terabox_player_downloader</a>';
+        }
+
+  </script>
+    
+</body>
+
+</html>
